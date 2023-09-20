@@ -3,15 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.codeless</groupId>
+        <artifactId>codeless-back-end</artifactId>
+        <version>1.0.0</version>
+    </parent>
 
-    <groupId>io.github.codeless</groupId>
-    <artifactId>codeless-back-end</artifactId>
-    <version>1.0.0</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>codeless-dependency</module>
-        <module>codeless-framework</module>
-    </modules>
+    <artifactId>codeless-framework</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
