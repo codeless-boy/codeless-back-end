@@ -6,15 +6,35 @@
     <parent>
         <groupId>io.github.codeless</groupId>
         <artifactId>codeless-back-end</artifactId>
-        <version>1.0.0</version>
+        <version>${codeless.verion}</version>
     </parent>
 
     <artifactId>codeless-framework</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>codeless-common</module>
+        <module>codeless-framework-database</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.codeless</groupId>
+                <artifactId>codeless-common</artifactId>
+                <version>${codeless.verion}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.codeless</groupId>
+                <artifactId>codeless-framework-database</artifactId>
+                <version>${codeless.verion}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
